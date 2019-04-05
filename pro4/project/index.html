@@ -1,0 +1,239 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<style>
+*{
+font-family: 'Acme', sans-serif;
+}
+body{
+	margin:0;
+	overflow:hidden;
+	font-size:14px;
+}
+.dropdown {
+  width: 230px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.dropdown > a, .dropdown.toggle > label {
+  border-radius: 2px;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+}
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #CCC;
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #999;
+  background-color: #FFF;
+}
+.dropdown li {
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 50ms;
+}
+.dropdown li:first-child a {
+  border-radius: 2px 2px 0 0;
+}
+.dropdown li:last-child a {
+  border-radius: 0 0 2px 2px;
+}
+.dropdown li:first-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  margin: -10px 0 0 30px;
+}
+.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+  background-color: #EEE;
+  color: #666;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #AAA;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+  height: 40px;
+}
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  padding-top: 15px;
+}
+.ifra_alg{
+border:1px solid black;
+width:100%;
+height:85%;
+}
+.boxy{
+background:#333;
+}
+.footer{
+background:#333;
+color:#aaa;
+height:6%;
+}
+#sublink1,#mainlink{
+color:#f70025;
+
+}
+#mainlink{
+	font-size:24px;
+}
+#sublink2{
+
+color:#ce5a57;
+}
+#sublink3{
+color:#0d6628;
+}
+#sublink4{
+color:#4831d4;
+
+}
+#sublink5{
+color:#0070f7;
+}
+#sublink6{
+color:#df678c;
+}
+#sublink7{
+color:#662225;
+}
+#sublink1:hover{
+background-color:#f96167;
+color:#fff;
+font-size:17px;
+}
+#sublink2:hover{
+background-color:#ce5a57;
+color:#fff;
+font-size:17px;
+}
+#sublink3:hover{
+background-color:#8bd8bd;
+color:#fff;
+font-size:17px;
+}
+#sublink4:hover{
+background-color:#336b87;
+font-size:17px;
+color:#fff;
+}
+#sublink5:hover{
+background-color:#375e97;
+color:#fff;
+font-size:17px;
+}
+#sublink6:hover{
+font-size:17px;
+background-color:#df678c;
+color:#fff;
+}
+#sublink7:hover{
+background-color:#f0a07c;
+color:#fff;
+font-size:17px;
+}
+.logout{
+	text-decoration:none;
+	color:#fff;
+	float:right;
+	position:relative;
+	right:10px;
+	top:12px;
+}
+
+</style>
+<script>
+	function sl1(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink1").textContent;
+		document.getElementById("mainlink").style.color='#f96167';
+	}
+	function sl2(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink2").textContent;
+		document.getElementById("mainlink").style.color='#ce5a57';
+		
+	}
+	function sl3(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink3").textContent;
+		document.getElementById("mainlink").style.color='#0d6628';
+	}
+	function sl4(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink4").textContent;
+		document.getElementById("mainlink").style.color='#336b87';
+	}
+	function sl5(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink5").textContent;
+		document.getElementById("mainlink").style.color='#375e97';
+	}
+	function sl6(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink6").textContent;
+		document.getElementById("mainlink").style.color='#df678c';
+	}
+	function sl7(){
+		document.getElementById("mainlink").textContent=document.getElementById("sublink7").textContent;
+		document.getElementById("mainlink").style.color='#f0a07c';
+	}
+
+</script>
+</head>
+<body>
+<div class="boxy">
+<center>
+	<div class="dropdown hover">
+		  <a href="#" id="mainlink">Ceacol</a>
+		  <ul>
+			<li><a href="algos/ceacol/index.html" target="dis_alg" id="sublink1" onclick="sl1()">Ceacol</a></li>
+			<li><a href="algos/bicii/index.html" target="dis_alg" id="sublink2" onclick="sl2()">BICII</a></li>
+			<li><a href="algos/ceagnere/index.html" target="dis_alg" id="sublink3" onclick="sl3()">CEAGNERE</a></li>
+			<li><a href="algos/ceaserroute/index.html" target="dis_alg" id="sublink4" onclick="sl4()">ROUNERE</a></li>
+			<li><a href="algos/ceaserfence/index.html" target="dis_alg" id="sublink5" onclick="sl5()">CEASERFENCE</a></li>
+			<li><a href="algos/vifence/index.html" target="dis_alg" id="sublink6" onclick="sl6()">VIFENCE</a></li>
+			<li><a href="algos/rsa/index.html" target="dis_alg" id="sublink7" onclick="sl7()">RSA</a></li>
+		  </ul>
+	 </div>
+	<a class="logout" href="login.py">Logout</a>
+	 </center>
+
+</div>
+<iframe name="dis_alg" class="ifra_alg" src="algos/ceacol/">
+</iframe>
+<div class="footer">
+	<center><br>Designed by ...</center>
+</div>
+<body>
+</html>
+ 

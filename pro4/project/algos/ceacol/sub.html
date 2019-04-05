@@ -1,0 +1,63 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<style>
+
+	.main_div{
+		width:95%;
+		height:100%;
+		
+	}
+	.inp_text{
+		height:50%;
+		width:100%;
+		border:1px solid #f96167;
+		border-radius:10px;
+	}
+	.inp_key1,.inp_key2{
+		height:37px;
+		width:100%;
+		border:1px solid #f96167;
+	}
+	.form_ele{
+		margin-top:10px;
+		border-radius:10px;
+	}
+	/*.btn_1{
+		float:left;
+	}
+	.btn_2{
+		float:right;
+	}*/
+	.btn_e{
+	font-family: 'Acme', sans-serif;
+	font-size:18px;
+	margin:10px 10% 0px 10%;;
+	width:300px;
+	height:37px;
+	border-radius:10px;
+	border:1px solid #f96167;
+	background:#f96167;
+	color:#fff;
+	}
+	.btn_e:hover{
+		cursor:pointer;
+		background:#fff;
+		color:#f96167;
+	}
+</style>
+</head>
+<body>
+<center>
+<div class="main_div">
+<form method="post" action="act_pages/page_1.py" target="sec">
+	<textarea name="name_pliantext" id="id_plaintext" class="inp_text" required placeholder="Enter the text"></textarea>
+	<input type="number" name="name_key1" id="id_key1" class="form_ele inp_key1" required placeholder="Enter key_1(integer)" title="key is integer" min=1>
+	<input type="text" name="name_key2" id="id_key2" class="form_ele inp_key2" required placeholder="Enter key_2(string)" title="key should contain characters only" pattern='^[a-zA-Z]{1,}$'><br>
+	<input type="submit" name="submit"  value="Encrypt" class="btn_1 btn_e">
+	<input type="submit" name="submit" value="Decrypt" class="btn_2 btn_e" formaction="act_pages/page_2.py" target="sec">
+</form>
+</div>
+</center>
+</body>
+</html>

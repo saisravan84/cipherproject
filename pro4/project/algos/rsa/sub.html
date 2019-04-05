@@ -1,0 +1,77 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<style>
+
+	.main_div{
+		width:95%;
+		height:100%;
+		
+	}
+	.inp_text{
+		height:65%;
+		width:100%;
+		border:1px solid #f0a07c;
+		border-radius:10px;
+	}
+	.inp_key1,.inp_key2{
+		height:37px;
+		width:50%;
+		border:1px solid #f0a07c;
+		font-family: 'Acme', sans-serif;
+		font-size:16px;
+	}
+	.form_ele{
+		margin-top:10px;
+		border-radius:10px;
+	}
+	/*.btn_1{
+		float:left;
+	}
+	.btn_2{
+		float:right;
+	}*/
+	.btn_e{
+	margin:10px 10% 0px 10%;;
+	width:300px;
+	height:37px;
+	border-radius:10px;
+	border:1px solid #f0a07c;
+	background:#f0a07c;
+	color:#fff;
+	font-family: 'Acme', sans-serif;
+	font-size:18px;
+	}
+	.key_text{
+	font-family: 'Acme', sans-serif;
+	font-size:18px;
+	}
+	.btn_e:hover{
+		cursor:pointer;
+		background:#fff;
+		color:#f0a07c;
+	}
+</style>
+</head>
+<body>
+<center>
+<div class="main_div">
+<form method="post" action="a.py" target="sec">
+	<textarea name="name_pliantext" id="id_plaintext" class="inp_text" required placeholder="Enter the text"></textarea>
+	<span class="key_text">Select a key :</span>
+	<select name="name_key1" class="inp_key1 form_ele">
+		<option value=5>5</option>
+		<option value=7>7</option>
+		<option value=11>11</option>
+
+		<option value=19>19</option>
+		<option value=23>23</option>
+	</select>
+	<br>
+	<input type="submit" name="submit"  value="Encrypt" class="btn_1 btn_e">
+	<input type="submit" name="submit" value="Decrypt" class="btn_2 btn_e" formaction="b.py" target="sec">
+</form>
+</div>
+</center>
+</body>
+</html>
